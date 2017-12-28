@@ -23,4 +23,8 @@ class Post extends Model
     {
         return self::where('published', true)->get();
     }
+
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 }
